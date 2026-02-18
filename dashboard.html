@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GlobalBridge Careers - Dashboard</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e3c72, #2a5298); /* Deep Navy gradient */
+      color: #fff;
+    }
+    header {
+      background: #1e3c72;
+      color: #ffd700;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+    nav h1 { font-size: 1.6rem; font-weight: bold; color: #ffd700; }
+    nav ul { list-style: none; display: flex; }
+    nav ul li { margin-left: 1.5rem; }
+    nav ul li a { color: #fff; text-decoration: none; font-weight: 600; }
+    nav ul li a:hover { color: #ffd700; }
+    .logo {
+      height: 50px;
+      margin-right: 10px;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    }
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: rgba(0,0,0,0.4);
+      color: #ffd700;
+    }
+    .hero h2 { font-size: 2.4rem; margin-bottom: 1rem; }
+    .dashboard {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+    .card {
+      background: #fff;
+      color: #333;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .card h3 {
+      color: #1e3c72;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #ffd700;
+      padding-bottom: 0.5rem;
+    }
+    .update-btn {
+      margin-left: 1rem;
+      padding: 0.3rem 0.6rem;
+      border: none;
+      border-radius: 5px;
+      background: #ffd700;
+      color: #1e3c72;
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-weight: bold;
+    }
+    .update-btn:hover { background: #e6c200; }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1e3c72;
+      color: #ffd700;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div style="display:flex; align-items:center;">
+        <img src="logo.png" alt="GlobalBridge Careers Logo" class="logo">
+        <h1>GlobalBridge Careers</h1>
+      </div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="apply.html">Apply</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="dashboard.html">Dashboard</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Welcome to Your Dashboard</h2>
+    <p>Track your applications, tasks, and updates in one place.</p>
+  </section>
+
+  <!-- Dashboard Content -->
+  <div class="dashboard">
+    <!-- Example Card -->
+    <div class="card">
+      <h3>My Applications</h3>
+      <p>Pending: 2</p>
+      <p>Approved: 1</p>
+      <p>Rejected: 0</p>
+    </div>
+
+    <div class="card">
+      <h3>My Tasks</h3>
+      <p>Completed: 3</p>
+      <p>In Progress: 1</p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 GlobalBridge Careers. All rights reserved.</p>
+  </footer>
+</body>
+</html>

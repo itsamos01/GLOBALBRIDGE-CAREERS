@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WritingHub - Home</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background: #004d40;
+      color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav h1 {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #00796b, #004d40);
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero .buttons a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.8rem 1.5rem;
+      background: #ff9800;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .hero .buttons a:hover {
+      background: #e68900;
+    }
+
+    /* Trust Banner */
+    .trust-banner {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #e0f2f1;
+      border-left: 5px solid #00796b;
+      border-radius: 8px;
+      font-size: 1rem;
+      color: #004d40;
+    }
+
+    /* Featured Section */
+    .featured {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .featured h3 {
+      font-size: 1.8rem;
+      color: #004d40;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h4 {
+      margin-bottom: 0.5rem;
+      color: #00796b;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .card a {
+      display: inline-block;
+      padding: 0.6rem 1rem;
+      background: #00796b;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 0.9rem;
+    }
+
+    .card a:hover {
+      background: #004d40;
+    }
+
+    /* About Section */
+    .about {
+      max-width: 900px;
+      margin: 3rem auto;
+      text-align: center;
+    }
+
+    .about h3 {
+      font-size: 1.8rem;
+      color: #004d40;
+      margin-bottom: 1rem;
+    }
+
+    .about p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Testimonials */
+    .testimonials {
+      background: #fff;
+      padding: 2rem;
+      margin: 3rem auto;
+      max-width: 1000px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .testimonials h3 {
+      text-align: center;
+      color: #004d40;
+      margin-bottom: 1.5rem;
+    }
+
+    .quote {
+      margin-bottom: 1rem;
+      font-style: italic;
+      color: #555;
+    }
+
+    .quote span {
+      display: block;
+      margin-top: 0.5rem;
+      font-weight: bold;
+      color: #00796b;
+    }
+
+    /* Call to Action */
+    .cta {
+      text-align: center;
+      padding: 2rem;
+      background: linear-gradient(135deg, #ff9800, #e68900);
+      color: #fff;
+      margin: 3rem 0;
+    }
+
+    .cta h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta a {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      background: #004d40;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .cta a:hover {
+      background: #00332d;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #004d40;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1>WritingHub</h1>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Trusted Jobs & Tasks Platform</h2>
+    <p>Connecting you to verified opportunities worldwide.</p>
+    <div class="buttons">
+      <a href="jobs.html">Explore Jobs</a>
+      <a href="tasks.html">Browse Tasks</a>
+      <a href="apply.html">Apply Now</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </section>
+
+  <!-- Trust Banner -->
+  <div class="trust-banner">
+    ✅ WritingHub ensures verified jobs and tasks, secure applications, and transparent processes. Your trust is our priority.
+  </div>
+
+  <!-- Featured Section -->
+  <div class="featured">
+    <h3>Featured Opportunities</h3>
+    <div class="cards">
+      <div class="card">
+        <h4>Nursing Job - Qatar</h4>
+        <p>Healthcare professionals needed in hospitals abroad.</p>
+        <a href="apply.html">Apply Now</a>
+      </div>
+      <div class="card">
+        <h4>Data Entry Task</h4>
+        <p>Organize and input data for verified clients.</p>
+        <a href="apply.html">Start Task</a>
+      </div>
+      <div class="card">
+        <h4>Teaching Job - Egypt</h4>
+        <p>Opportunities for teachers in schools and institutions.</p>
+        <a href="apply.html">Apply Now</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Section -->
+  <div class="

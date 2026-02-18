@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WritingHub - Tasks</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f6f9;
+      color: #333;
+    }
+
+    /* Navbar */
+    header {
+      background: #004d40;
+      color: #fff;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    nav h1 {
+      font-size: 1.6rem;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+
+    nav ul li {
+      margin-left: 1.5rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      color: #ff9800;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 3rem 2rem;
+      background: linear-gradient(135deg, #00796b, #004d40);
+      color: #fff;
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+    }
+
+    /* Search & Filter */
+    .search-filter {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .search-filter h3 {
+      margin-bottom: 1rem;
+      color: #004d40;
+    }
+
+    .search-filter form {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .search-filter input,
+    .search-filter select,
+    .search-filter button {
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 0.95rem;
+    }
+
+    .search-filter button {
+      background: #00796b;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    .search-filter button:hover {
+      background: #004d40;
+    }
+
+    /* Task Cards */
+    section {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    section h3 {
+      font-size: 1.6rem;
+      color: #004d40;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #00796b;
+      padding-bottom: 0.5rem;
+    }
+
+    .tasks {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #fff;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card h4 {
+      margin-bottom: 0.5rem;
+      color: #00796b;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .verified {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #00796b;
+      color: #fff;
+      padding: 0.3rem 0.6rem;
+      font-size: 0.8rem;
+      border-radius: 5px;
+    }
+
+    .card button {
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 5px;
+      background: #00796b;
+      color: #fff;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+
+    .card button:hover {
+      background: #004d40;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #004d40;
+      color: #fff;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h1>WritingHub</h1>
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="jobs.html">Jobs</a></li>
+        <li><a href="tasks.html">Tasks</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h2>Verified Online Tasks</h2>
+    <p>Earn by completing simple, trusted tasks online.</p>
+  </section>
+
+  <!-- Search & Filter -->
+  <section class="search-filter">
+    <h3>Discover Verified Tasks</h3>
+    <form>
+      <input type="text" placeholder="Search tasks..." id="searchTaskInput">
+      <select id="taskCategoryFilter">
+        <option value="">Filter by Category</option>
+        <option value="Writing">Writing & Editing</option>
+        <option value="Data">Data & Research</option>
+        <option value="Creative">Creative & Design</option>
+        <option value="Support">Support & Transcription</option>
+      </select>
+      <button type="button" onclick="filterTasks()">Search</button>
+    </form>
+  </section>
+
+  <!-- Task Categories -->
+  <section>
+    <h3>Available Tasks</h3>
+    <div class="tasks">
+      <div class="card">
+        <span class="verified">Verified</span>
+        <h4>Article Writing</h4>
+        <p>Write short articles or blog posts for clients.</p>
+        <button onclick="window.location.href='apply.html'">Start Task</button>
+      </div>
+      <div class="card">
+        <span class="verified">Verified</span>
+        <h4>Proofreading</h4>
+        <p>Check grammar and spelling in documents.</p>
+        <button onclick="window.location.href='apply.html'">Start Task</button>
+      </div>
+      <div class="card">
+        <span class="verified">Verified</span>
+        <h4>Data Entry</h4>
+        <p>Enter and organize data into spreadsheets.</p>
+        <button onclick="window.location.href='apply.html'">Start Task</button>
+      </div>
+      <div class="card">
+        <span class="verified">Verified</span>
+        <h4>Survey Participation</h4>
+        <p>Answer short surveys for market research.</p>
+        <button onclick="window.location.href='apply.html'">Start Task</button>
+      </div>
+      <div class="card">
+        <span class="verified">Verified</span>
+        <h4>Graphic Design</h4>
+        <p>Create simple graphics or layouts for clients.</p>
+        <button onclick="window.location.href='apply.html'">Start Task</button>
+      </div>
+      <div class="card">
+        <span class="verified">Verified</span>
+        <h4>Transcription</h4>
+        <p>Convert audio recordings into text documents.</p>
+        <button onclick="window.location.href='apply.html'">Start Task</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 WritingHub. All rights reserved.</p>
+  </footer>
+
+  <!-- Filter Script -->
+  <script>
+    function filterTasks() {
+      let search = document.getElementById('searchTaskInput').value.toLowerCase();
+      let category = document.getElementById('taskCategoryFilter').value.toLowerCase();
+
+      let cards = document
