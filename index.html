@@ -9,13 +9,14 @@
       font-family: 'Segoe UI', Arial, sans-serif;
       margin: 0;
       padding: 0;
-      /* Deep Navy background with Gold accents */
-      background: linear-gradient(135deg, #1e3c72, #2a5298); 
+      background: linear-gradient(135deg, #1e3c72, #2a5298); /* Deep Navy gradient */
       color: #fff;
     }
+
+    /* Navbar */
     header {
-      background: #1e3c72; /* Deep Navy */
-      color: #ffd700;      /* Gold */
+      background: #1e3c72;
+      color: #ffd700;
       padding: 1rem 2rem;
       box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     }
@@ -23,22 +24,33 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap; /* allows wrapping on small screens */
       max-width: 1200px;
       margin: auto;
     }
     nav h1 { font-size: 1.6rem; font-weight: bold; color: #ffd700; }
-    nav ul { list-style: none; display: flex; }
-    nav ul li { margin-left: 1.5rem; }
+    nav ul { list-style: none; display: flex; flex-wrap: wrap; padding: 0; margin: 0; }
+    nav ul li { margin: 0.5rem; }
     nav ul li a { color: #fff; text-decoration: none; font-weight: 600; }
     nav ul li a:hover { color: #ffd700; }
+
+    .logo {
+      height: 50px;
+      margin-right: 10px;
+      filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
+    }
+
+    /* Hero Section */
     .hero {
       text-align: center;
-      padding: 4rem 2rem;
-      background: rgba(0,0,0,0.4); /* overlay for contrast */
+      padding: 3rem 2rem;
+      background: rgba(0,0,0,0.4);
       color: #ffd700;
     }
-    .hero h2 { font-size: 2.6rem; margin-bottom: 1rem; }
+    .hero h2 { font-size: 2.4rem; margin-bottom: 1rem; }
     .hero p { font-size: 1.2rem; color: #fff; }
+
+    /* Trust Banner */
     .trust-banner {
       background: #ffd700;
       color: #1e3c72;
@@ -46,6 +58,8 @@
       padding: 1rem;
       font-weight: bold;
     }
+
+    /* Content Section */
     .content {
       max-width: 1000px;
       margin: 2rem auto;
@@ -56,28 +70,24 @@
       color: #ffd700;
       margin-bottom: 1rem;
     }
+
+    /* Cards */
     .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
       margin-top: 2rem;
     }
     .card {
       background: #fff;
+      color: #333;
       padding: 1.5rem;
       border-radius: 10px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
       text-align: left;
-      color: #333;
     }
-    .card h4 {
-      color: #1e3c72;
-      margin-bottom: 0.5rem;
-    }
-    .card p {
-      font-size: 0.95rem;
-      margin-bottom: 1rem;
-    }
+    .card h4 { color: #1e3c72; margin-bottom: 0.5rem; }
+    .card p { font-size: 0.95rem; margin-bottom: 1rem; }
     .card a {
       display: inline-block;
       padding: 0.5rem 1rem;
@@ -89,6 +99,8 @@
       font-weight: bold;
     }
     .card a:hover { background: #e6c200; }
+
+    /* Footer */
     footer {
       text-align: center;
       padding: 1rem;
@@ -96,10 +108,19 @@
       color: #ffd700;
       margin-top: 2rem;
     }
-    .logo {
-      height: 50px;
-      vertical-align: middle;
-      margin-right: 10px;
+
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+      nav { flex-direction: column; text-align: center; }
+      nav ul { flex-direction: column; margin-top: 1rem; }
+      nav ul li { margin: 0.5rem 0; }
+      .hero h2 { font-size: 1.8rem; }
+      .hero p { font-size: 1rem; }
+    }
+    @media (max-width: 480px) {
+      .logo { height: 35px; }
+      .hero h2 { font-size: 1.4rem; }
+      .hero p { font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -107,9 +128,8 @@
   <!-- Navbar -->
   <header>
     <nav>
-      <!-- Logo + Brand Name -->
-      <div>
-        <img src="globalbridge-logo.png" alt="GlobalBridge Careers Logo" class="logo">
+      <div style="display:flex; align-items:center;">
+        <img src="logo.png" alt="GlobalBridge Careers Logo" class="logo">
         <h1>GlobalBridge Careers</h1>
       </div>
       <ul>
@@ -121,6 +141,7 @@
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="testimonials.html">Testimonials</a></li>
         <li><a href="dashboard.html">Dashboard</a></li>
+        <li><a href="about.html">About</a></li>
       </ul>
     </nav>
   </header>
@@ -162,3 +183,8 @@
   </div>
 
   <!-- Footer -->
+  <footer>
+    <p>&copy; 2026 GlobalBridge Careers. All rights reserved.</p>
+  </footer>
+</body>
+</html>
